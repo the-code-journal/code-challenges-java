@@ -14,7 +14,7 @@ public class Close10 {
         if (closeA > closeB) {
             return b;
         }
-        return 0;
 
+        return 0;
     }
 }
