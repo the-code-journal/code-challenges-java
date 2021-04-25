@@ -3,7 +3,32 @@ version: 2.1
 orbs:
   maven: circleci/maven@1.1
 
+jobs:
+  build:
+    environment:
+      CODACY_API_TOKEN: "$CODACY_API_TOKEN"
+    docker:
+      - image: circleci/openjdk:stretch
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "pom.xml" }}
+            - v1-dependencies-
+      - run:
+          command: |
+            mvn -B -Djacoco.destFile=./coverage/jacoco.exec clean org.jacoco:jacoco-maven-plugin:0.8.6:prepare-agent package
+      - save_cache:
+            paths:
+              - ~/.m2
+            key: v1-dependencies-{{ checksum "pom.xml" }}
+      - store_test_results:
+          path: target/surefire-reports
+      - store_artifacts:
+          path: target/site/jacoco/index.html
+
 workflows:
-  maven_test:
+  version: 2.1
+  workflow:
     jobs:
-      - maven/test
+      - build
