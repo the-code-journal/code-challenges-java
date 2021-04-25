@@ -16,8 +16,12 @@ jobs:
             - v1-dependencies-{{ checksum "pom.xml" }}
             - v1-dependencies-
       - run:
+          name: "maven-build"
           command: |
-            mvn -B -Djacoco.destFile=./coverage/jacoco.exec clean org.jacoco:jacoco-maven-plugin:0.8.6:prepare-agent package
+            mvn -B clean package
+      - run:
+          name: "codacy"
+          command: "bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r target/site/jacoco/jacoco.xml"
       - save_cache:
             paths:
               - ~/.m2
