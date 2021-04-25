@@ -4,7 +4,6 @@
 
 Coding Challenges across various websites solved using Java.
 
-- [CodingBat][1]
-
+-  [CodingBat][1]
 
   [1]: https://codingbat.com/java
