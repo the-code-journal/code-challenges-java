@@ -21,9 +21,11 @@ public class Unlucky1Test {
 
         final boolean expected = true;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
@@ -33,9 +35,11 @@ public class Unlucky1Test {
 
         final boolean expected = true;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
@@ -45,9 +49,11 @@ public class Unlucky1Test {
 
         final boolean expected = false;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
@@ -57,9 +63,11 @@ public class Unlucky1Test {
 
         final boolean expected = false;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
@@ -69,9 +77,11 @@ public class Unlucky1Test {
 
         final boolean expected = false;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
@@ -81,9 +91,11 @@ public class Unlucky1Test {
 
         final boolean expected = false;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 
     @Test
@@ -93,8 +105,10 @@ public class Unlucky1Test {
 
         final boolean expected = true;
 
-        final boolean actual = fixture.unlucky1(nums);
+        final boolean actual1 = fixture.unlucky1(nums);
+        final boolean actual2 = fixture.unlucky1NonPredicate(nums);
 
-        assertThat(actual).isEqualTo(expected);
+        assertThat(actual1).isEqualTo(expected);
+        assertThat(actual2).isEqualTo(expected);
     }
 }

@@ -54,6 +54,19 @@ public class StartWordTest {
     }
 
     @Test
+    public void testcase4() {
+
+        final String str = "xxxxxxx";
+        final String word = "yyyyyyy";
+
+        final String expected = "";
+
+        final String actual = fixture.startWord(str, word);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
     public void shouldReturnEmptyWhenBothAreNull() {
 
         final String str = null;
