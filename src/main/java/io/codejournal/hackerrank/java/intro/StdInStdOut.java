@@ -1,18 +1,19 @@
 package io.codejournal.hackerrank.java.intro;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class StdInStdOut {
 
-    static {
+    public static void main(final String[] args) {
         final String input = "42\n100\n125";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        new StdInStdOut().run(new ByteArrayInputStream(input.getBytes()));
     }
 
-    public static void main(final String[] args) {
+    public void run(final InputStream input) {
 
-        final Scanner scan = new Scanner(System.in);
+        final Scanner scan = new Scanner(input);
 
         int a = 0;
 

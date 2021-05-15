@@ -1,6 +1,7 @@
 package io.codejournal.hackerrank.java.intro;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class IfElse {
@@ -9,24 +10,27 @@ public class IfElse {
 
     static final String NOT_WEIRD = "Not Weird";
 
-    static {
-        final String input = "3";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
-    }
-
     public static void main(final String[] args) {
 
-        final Scanner sc = new Scanner(System.in);
+        final String input = "3";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-        final int n = sc.nextInt();
+        new IfElse().run(System.in);
+    }
+
+    public void run(final InputStream input) {
+
+        final Scanner sc = new Scanner(input);
+
+        final int number = sc.nextInt();
 
         String ans = "";
 
-        if (isOdd(n)) {
+        if (isOdd(number)) {
             ans = WEIRD;
-        } else if (2 <= n && n <= 5) {
+        } else if (2 <= number && number <= 5) {
             ans = NOT_WEIRD;
-        } else if (6 <= n && n <= 20) {
+        } else if (6 <= number && number <= 20) {
             ans = WEIRD;
         } else {
             ans = NOT_WEIRD;
@@ -37,7 +41,7 @@ public class IfElse {
         sc.close();
     }
 
-    private static boolean isOdd(final int number) {
+    private boolean isOdd(final int number) {
         return (number & 1) == 1; // Bitwise AND(&) of Number and 1
     }
 }

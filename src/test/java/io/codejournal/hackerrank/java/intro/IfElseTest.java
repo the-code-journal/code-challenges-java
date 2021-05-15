@@ -9,21 +9,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class IfElseTest {
 
-    @BeforeEach
-    public void setUp() {
-        main_LogsWierd_WhenInputStringIsOdd();
-    }
+    private IfElse fixture = new IfElse();
 
     @Test
-    void main_LogsWierd_WhenInputStringIsOdd() {
-
-        final String input = "3";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
+    public void defaultCase() {
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
@@ -36,15 +29,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsNotWierd_WhenInputStringIs2() {
+    void run_LogsNotWierd_WhenInputStringIs2() {
 
         final String input = "2";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
@@ -52,15 +44,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsNotWierd_WhenInputStringIs4() {
+    void run_LogsNotWierd_WhenInputStringIs4() {
 
         final String input = "4";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
@@ -68,15 +59,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsWierd_WhenInputStringIs6() {
+    void run_LogsWierd_WhenInputStringIs6() {
 
         final String input = "6";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
@@ -84,15 +74,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsWierd_WhenInputStringIs20() {
+    void run_LogsWierd_WhenInputStringIs20() {
 
         final String input = "20";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
@@ -100,15 +89,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsNotWierd_WhenInputStringIs22() {
+    void run_LogsNotWierd_WhenInputStringIs22() {
 
         final String input = "22";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
@@ -116,15 +104,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsWierd_WhenInputStringIsNegativeOdd() {
+    void run_LogsWierd_WhenInputStringIsNegativeOdd() {
 
         final String input = "-3";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
@@ -132,15 +119,14 @@ public class IfElseTest {
     }
 
     @Test
-    void main_LogsNotWierd_WhenInputStringIsNegativeEven() {
+    void run_LogsNotWierd_WhenInputStringIsNegativeEven() {
 
         final String input = "-2";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        IfElse.main(null);
+        fixture.run(new ByteArrayInputStream(input.getBytes()));
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 

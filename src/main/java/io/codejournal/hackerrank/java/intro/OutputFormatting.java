@@ -1,18 +1,19 @@
 package io.codejournal.hackerrank.java.intro;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class OutputFormatting {
 
-    static {
+    public static void main(final String[] args) {
         final String input = "java 100\ncpp 65\npython 50";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        new OutputFormatting().run(new ByteArrayInputStream(input.getBytes()));
     }
 
-    public static void main(final String[] args) {
+    public void run(final InputStream input) {
 
-        final Scanner sc = new Scanner(System.in);
+        final Scanner sc = new Scanner(input);
 
         System.out.println("================================");
 

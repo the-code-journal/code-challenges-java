@@ -1,18 +1,19 @@
 package io.codejournal.hackerrank.java.intro;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class StdInStdOut2 {
 
-    static {
+    public static void main(final String[] args) {
         final String input = "42\n3.1415\nWelcome to HackerRank's Java tutorials!";
-        System.setIn(new ByteArrayInputStream(input.getBytes()));
+        new StdInStdOut2().run(new ByteArrayInputStream(input.getBytes()));
     }
 
-    public static void main(final String[] args) {
+    public void run(final InputStream input) {
 
-        final Scanner scan = new Scanner(System.in);
+        final Scanner scan = new Scanner(input);
 
         final int intValue = scan.nextInt();
         final double doubleValue = scan.nextDouble();
