@@ -4,11 +4,11 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class StdInStdOut2 {
+public class StdInStdOutTwo {
 
     public static void main(final String[] args) {
         final String input = "42\n3.1415\nWelcome to HackerRank's Java tutorials!";
-        new StdInStdOut2().run(new ByteArrayInputStream(input.getBytes()));
+        new StdInStdOutTwo().run(new ByteArrayInputStream(input.getBytes()));
     }
 
     public void run(final InputStream input) {

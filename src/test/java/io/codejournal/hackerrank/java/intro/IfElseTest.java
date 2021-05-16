@@ -2,28 +2,34 @@ package io.codejournal.hackerrank.java.intro;
 
 import static io.codejournal.hackerrank.java.intro.IfElse.NOT_WEIRD;
 import static io.codejournal.hackerrank.java.intro.IfElse.WEIRD;
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class IfElseTest {
 
+    private ByteArrayOutputStream output;
+
     private IfElse fixture = new IfElse();
+
+    @BeforeEach
+    public void setUp() {
+        output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+    }
 
     @Test
     public void defaultCase() {
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         IfElse.main(null);
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(WEIRD);
     }
@@ -33,12 +39,9 @@ public class IfElseTest {
 
         final String input = "2";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(NOT_WEIRD);
     }
@@ -48,12 +51,9 @@ public class IfElseTest {
 
         final String input = "4";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(NOT_WEIRD);
     }
@@ -63,12 +63,9 @@ public class IfElseTest {
 
         final String input = "6";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(WEIRD);
     }
@@ -78,12 +75,9 @@ public class IfElseTest {
 
         final String input = "20";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(WEIRD);
     }
@@ -93,12 +87,9 @@ public class IfElseTest {
 
         final String input = "22";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(NOT_WEIRD);
     }
@@ -108,12 +99,9 @@ public class IfElseTest {
 
         final String input = "-3";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(WEIRD);
     }
@@ -123,12 +111,9 @@ public class IfElseTest {
 
         final String input = "-2";
 
-        final ByteArrayOutputStream output = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(output));
-
         fixture.run(new ByteArrayInputStream(input.getBytes()));
 
-        final String actual = output.toString(StandardCharsets.UTF_8);
+        final String actual = output.toString(UTF_8);
 
         assertThat(actual).contains(NOT_WEIRD);
     }

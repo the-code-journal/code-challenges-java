@@ -1,19 +1,21 @@
 package io.codejournal.hackerrank.java.intro;
 
+import static java.lang.Math.random;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class HelloWorldTest {
+public class LoopsOneTest {
 
     private ByteArrayOutputStream output;
 
-    private HelloWorld fixture = new HelloWorld();
+    private LoopsOne fixture = new LoopsOne();
 
     @BeforeEach
     public void setUp() {
@@ -22,22 +24,30 @@ public class HelloWorldTest {
     }
 
     @Test
-    public void defaultCase() {
+    public void defaultCase() throws IOException {
 
-        HelloWorld.main(null);
+        LoopsOne.main(null);
 
         final String actual = output.toString(UTF_8);
 
-        assertThat(actual).contains("Hello, World.").contains("Hello, Java.");
+        verify(actual, 2);
     }
 
     @Test
-    public void run_LogsHelloWorldAndHelloJava() {
+    public void run_PrintsMultipleTable_ForGivenNumber() {
 
-        fixture.run();
+        final int number = (int) (random() * 100);
+
+        fixture.run(number);
 
         final String actual = output.toString(UTF_8);
 
-        assertThat(actual).contains("Hello, World.").contains("Hello, Java.");
+        verify(actual, number);
+    }
+
+    private void verify(final String actual, final int number) {
+        for (int i = 1; i <= 10; i++) {
+            assertThat(actual).contains(String.format("%d x %d = %d", number, i, (number * i)));
+        }
     }
 }
