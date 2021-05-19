@@ -14,7 +14,7 @@ public class DateAndTime {
 
         final Scanner in = new Scanner(System.in);
 
-        final int month = Integer.parseInt(in.next().trim()) - 1;
+        final int month = Integer.parseInt(in.next().trim());
         final int day = Integer.parseInt(in.next().trim());
         final int year = Integer.parseInt(in.next().trim());
 
@@ -28,7 +28,7 @@ public class DateAndTime {
         Calendar c = Calendar.getInstance();
 
         c.set(Calendar.YEAR, year);
-        c.set(Calendar.MONTH, month);
+        c.set(Calendar.MONTH, month - 1);
         c.set(Calendar.DATE, day);
 
         return new SimpleDateFormat("EEEE").format(c.getTime()).toUpperCase();
