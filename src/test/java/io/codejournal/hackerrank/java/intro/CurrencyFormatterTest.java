@@ -27,6 +27,6 @@ public class CurrencyFormatterTest {
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
-        assertThat(actual.trim()).isEqualTo(expected);
+        assertThat(actual.trim().replace("₹ ", "₹")).isEqualTo(expected);
     }
 }
