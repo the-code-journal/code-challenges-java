@@ -15,7 +15,6 @@ public class CurrencyFormatterTest {
 
         // @formatter:off
         final String expected = "US: $12,324.13\n"
-                              + "India: ₹12,324.13\n"
                               + "China: ¥12,324.13\n"
                               + "France: 12 324,13 €";
         // @formatter:on
@@ -27,6 +26,6 @@ public class CurrencyFormatterTest {
 
         final String actual = output.toString(StandardCharsets.UTF_8);
 
-        assertThat(actual.trim().replace("₹ ", "₹")).isEqualTo(expected);
+        assertThat(actual.trim()).isEqualTo(expected);
     }
 }
