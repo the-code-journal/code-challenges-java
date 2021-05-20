@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 public class Day05Loops {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         final String input = "3";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
