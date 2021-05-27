@@ -96,9 +96,10 @@ class HourGlassProcessor implements ArrayProcessor {
 
                 final int[] selectedValues = valueSelector.select(array, row, column);
 
-                final int currentResult = valueReducer.reduce(selectedValues);
-
-                result = resultMerger.merge(result, currentResult);
+                if (selectedValues.length > 0) {
+                    final int currentResult = valueReducer.reduce(selectedValues);
+                    result = resultMerger.merge(result, currentResult);
+                }
             }
         }
 
