@@ -1,10 +1,10 @@
 package io.codejournal.hackerrank.thirtydaysofcode;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +28,7 @@ public class Day16StringToIntegerTest {
 
         Day16StringToInteger.main(null);
 
-        final String actual = output.toString(StandardCharsets.UTF_8).trim();
+        final String actual = output.toString(UTF_8).trim();
 
         assertThat(actual).isEqualTo(expected);
     }
@@ -40,7 +40,7 @@ public class Day16StringToIntegerTest {
 
         fixture.parse("za");
 
-        final String actual = output.toString(StandardCharsets.UTF_8).trim();
+        final String actual = output.toString(UTF_8).trim();
 
         assertThat(actual).isEqualTo(expected);
     }
