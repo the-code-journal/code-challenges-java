@@ -2,6 +2,8 @@ package io.codejournal.hackerrank.thirtydaysofcode;
 
 import java.io.ByteArrayInputStream;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class Day22BinarySearchTree {
@@ -87,6 +89,38 @@ class BinaryTree {
         }
 
         return 1 + Math.max(getHeight(node.getLeft()), getHeight(node.getRight()));
+    }
+
+    public void levelOrderTraversal() {
+        levelOrderTraversal(root);
+    }
+
+    private void levelOrderTraversal(final BinaryTreeNode node) {
+
+        final Queue<BinaryTreeNode> levelOrder = new LinkedList<>();
+
+        levelOrder.add(node);
+
+        final StringBuilder levelOrderTraversal = new StringBuilder();
+
+        while (!levelOrder.isEmpty()) {
+
+            final BinaryTreeNode currentNode = levelOrder.peek();
+
+            levelOrderTraversal.append(currentNode.data + " ");
+
+            if (currentNode.left != null) {
+                levelOrder.add(currentNode.getLeft());
+            }
+
+            if (currentNode.right != null) {
+                levelOrder.add(currentNode.getRight());
+            }
+
+            levelOrder.remove();
+        }
+
+        System.out.println(levelOrderTraversal.toString().trim());
     }
 }
 
