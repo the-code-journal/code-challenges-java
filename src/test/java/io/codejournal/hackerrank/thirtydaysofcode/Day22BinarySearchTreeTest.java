@@ -24,5 +24,4 @@ public class Day22BinarySearchTreeTest {
 
         assertThat(actual).isEqualTo(expected);
     }
-
 }
