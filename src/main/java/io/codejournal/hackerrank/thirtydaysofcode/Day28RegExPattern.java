@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class Day28RegExPattern {
 
-    final Pattern EMAIL_WITH_GMAIL = Pattern.compile("^(\\w+) (\\w+)@gmail.com$");
+    private static final Pattern EMAIL_WITH_GMAIL = Pattern.compile("^(\\w+) (\\w+)@gmail.com$");
 
     public static void main(final String[] args) {
 
