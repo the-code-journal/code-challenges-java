@@ -8,20 +8,20 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
 
-public class Day08DictionariesAndMapsTest {
+public class Day11Array2DTest {
 
     @Test
-    public void defaultCase() {
+    public void defaultCaseHourGlass() {
 
         final ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
 
-        final String expected = "sam=99912222\nNot found\nharry=12299933";
+        final String expected = "19";
 
-        Day08DictionariesAndMaps.main(null);
+        Day11Array2D.main(null);
 
-        final String actual = output.toString(UTF_8);
+        final String actual = output.toString(UTF_8).trim();
 
-        assertThat(actual.trim()).isEqualTo(expected);
+        assertThat(actual).isEqualTo(expected);
     }
 }
