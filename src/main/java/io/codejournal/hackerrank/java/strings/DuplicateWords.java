@@ -1,7 +1,6 @@
 package io.codejournal.hackerrank.java.strings;
 
 import static java.util.regex.Pattern.CASE_INSENSITIVE;
-import static java.util.regex.Pattern.MULTILINE;
 
 import java.io.ByteArrayInputStream;
 import java.util.Scanner;
@@ -11,7 +10,7 @@ import java.util.regex.Pattern;
 public class DuplicateWords {
 
     // @formatter:off
-    private static final Pattern DUPLICATE_WORD_REGEX = Pattern.compile("\\b(\\w+)(\\b\\W+\\b\\1\\b)*", CASE_INSENSITIVE + MULTILINE);
+    private static final Pattern DUPLICATE_WORD_REGEX = Pattern.compile("\\b(\\w+)(?:\\W+\\1\\b)+", CASE_INSENSITIVE);
 
     public static void main(final String[] args) {
 
