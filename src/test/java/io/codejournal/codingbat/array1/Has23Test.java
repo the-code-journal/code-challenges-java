@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.array1.Has23;
-
 public class Has23Test {
 
     private Has23 fixture;

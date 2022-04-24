@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.warmup1.MixStart;
-
 public class MixStartTest {
 
     private MixStart fixture;
@@ -29,7 +27,7 @@ public class MixStartTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenStringLengthIsGreaterThanOrEqualTo3AndDoesntContainsIXAt2ndAnd3rdPosition() {
+    public void shouldReturnFalseWhenStringContainsIxAt2ndAnd3rdPosition() {
 
         final String str = "abcd";
 
@@ -41,7 +39,7 @@ public class MixStartTest {
     }
 
     @Test
-    public void shouldReturnTrueWhenStringLengthIsGreaterThanOrEqualTo3AndContainsIXAt2ndAnd3rdPosition() {
+    public void shouldReturnTrueWhenStringContainsIxAt2ndAnd3rdPosition() {
 
         final String str = "aixd";
 

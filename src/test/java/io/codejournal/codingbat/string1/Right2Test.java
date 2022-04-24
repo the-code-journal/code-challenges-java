@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.string1.Right2;
-
 public class Right2Test {
 
     private Right2 fixture;

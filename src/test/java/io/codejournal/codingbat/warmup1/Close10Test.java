@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.warmup1.Close10;
-
 public class Close10Test {
 
     private Close10 fixture;

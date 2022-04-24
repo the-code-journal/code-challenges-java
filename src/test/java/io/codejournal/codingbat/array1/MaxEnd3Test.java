@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.array1.MaxEnd3;
-
 public class MaxEnd3Test {
 
     private MaxEnd3 fixture;

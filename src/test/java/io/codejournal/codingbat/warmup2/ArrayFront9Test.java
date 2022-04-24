@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.warmup2.ArrayFront9;
-
 public class ArrayFront9Test {
 
     private ArrayFront9 fixture;

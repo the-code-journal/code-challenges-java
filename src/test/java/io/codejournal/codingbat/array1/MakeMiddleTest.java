@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.array1.MakeMiddle;
-
 public class MakeMiddleTest {
 
     private MakeMiddle fixture;
@@ -82,6 +80,7 @@ public class MakeMiddleTest {
 
         final int[] nums = new int[] { 1, 2, 3 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.makeMiddle(nums));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.makeMiddle(nums));
     }
 }

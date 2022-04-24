@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.string1.NTwice;
-
 public class NTwiceTest {
 
     private NTwice fixture;
@@ -84,6 +82,7 @@ public class NTwiceTest {
 
     @Test
     public void shouldThrowExceptionWhenStrLengthIsSmallThanN() {
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.nTwice("abc", 5));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.nTwice("abc", 5));
     }
 }

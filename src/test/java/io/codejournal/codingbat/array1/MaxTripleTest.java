@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.array1.MaxTriple;
-
 public class MaxTripleTest {
 
     private MaxTriple fixture;
@@ -58,7 +56,8 @@ public class MaxTripleTest {
 
         final int[] nums = null;
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.maxTriple(nums));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.maxTriple(nums));
     }
 
     @Test
@@ -66,7 +65,8 @@ public class MaxTripleTest {
 
         final int[] nums = new int[] {};
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.maxTriple(nums));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.maxTriple(nums));
     }
 
     @Test
@@ -74,7 +74,8 @@ public class MaxTripleTest {
 
         final int[] nums = new int[] { 5, 2 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.maxTriple(nums));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.maxTriple(nums));
     }
 
     @Test

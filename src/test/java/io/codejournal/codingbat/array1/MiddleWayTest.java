@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.array1.MiddleWay;
-
 public class MiddleWayTest {
 
     private MiddleWay fixture;
@@ -106,7 +104,8 @@ public class MiddleWayTest {
         final int[] a = new int[] { 2, 4 };
         final int[] b = new int[] { 1, 2, 3, 4 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.middleWay(a, b));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.middleWay(a, b));
     }
 
     @Test
@@ -115,7 +114,8 @@ public class MiddleWayTest {
         final int[] a = new int[] { 1, 2, 3, 4 };
         final int[] b = new int[] { 2, 4 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.middleWay(a, b));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.middleWay(a, b));
     }
 
     @Test
@@ -124,7 +124,8 @@ public class MiddleWayTest {
         final int[] a = new int[] { 1 };
         final int[] b = new int[] { 2, 4 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.middleWay(a, b));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.middleWay(a, b));
     }
 
     @Test
@@ -133,7 +134,8 @@ public class MiddleWayTest {
         final int[] a = new int[] { 2, 4 };
         final int[] b = new int[] { 1 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.middleWay(a, b));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.middleWay(a, b));
     }
 
     @Test
