@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.string1.MiddleTwo;
-
 public class MiddleTwoTest {
 
     private MiddleTwo fixture;
@@ -79,7 +77,8 @@ public class MiddleTwoTest {
 
     @Test
     public void shouldReturnEmptyWhenStrIsOddLength() {
-        assertThatExceptionOfType(UnsupportedOperationException.class).isThrownBy(() -> fixture.middleTwo("a"));
+        assertThatExceptionOfType(UnsupportedOperationException.class)
+                .isThrownBy(() -> fixture.middleTwo("a"));
     }
 
 }

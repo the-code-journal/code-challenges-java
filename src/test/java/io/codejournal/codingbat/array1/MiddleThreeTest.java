@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.array1.MiddleThree;
-
 public class MiddleThreeTest {
 
     private MiddleThree fixture;
@@ -73,6 +71,7 @@ public class MiddleThreeTest {
 
         final int[] nums = new int[] { 1, 2 };
 
-        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> fixture.midThree(nums));
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> fixture.midThree(nums));
     }
 }

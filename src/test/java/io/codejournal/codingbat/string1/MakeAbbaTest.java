@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.string1.MakeAbba;
-
 public class MakeAbbaTest {
 
     private MakeAbba fixture;
@@ -43,7 +41,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsNullAndBIsNotNull() {
+    public void shouldReturnDoubleBWhenAIsNullAndBIsNotNull() {
 
         final String a = null;
         final String b = "B";
@@ -56,7 +54,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsEmptyAndBIsNotNull() {
+    public void shouldReturnDoubleBWhenAIsEmptyAndBIsNotNull() {
 
         final String a = "";
         final String b = "B";
@@ -69,7 +67,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnAAWhenAIsNotNullAndBIsNull() {
+    public void shouldReturnDoubleAWhenAIsNotNullAndBIsNull() {
 
         final String a = "A";
         final String b = null;
@@ -82,7 +80,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsNotNullAndBIsNull() {
+    public void shouldReturnDoubleAWhenAIsNotNullAndBIsEmpty() {
 
         final String a = "A";
         final String b = "";
@@ -95,7 +93,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsNotNullAndBIsNotNullUpper() {
+    public void shouldReturnAbbaWhenAIsNotNullAndBIsNotNullUpper() {
 
         final String a = "A";
         final String b = "B";
@@ -108,7 +106,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsNotNullAndBIsNotNullLower() {
+    public void shouldReturnAbbaWhenAIsNotNullAndBIsNotNullLower() {
 
         final String a = "a";
         final String b = "b";
@@ -121,7 +119,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsNotNullAndBIsNotNullMixed() {
+    public void shouldReturnAbbaWhenAIsNotNullAndBIsNotNullMixed() {
 
         final String a = "A";
         final String b = "b";
@@ -134,7 +132,7 @@ public class MakeAbbaTest {
     }
 
     @Test
-    public void shouldReturnBBWhenAIsNotNullAndBIsNotNullMultiChar() {
+    public void shouldReturnAbbaWhenAIsNotNullAndBIsNotNullMultiChar() {
 
         final String a = "Abc";
         final String b = "Xyz";

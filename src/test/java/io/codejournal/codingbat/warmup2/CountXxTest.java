@@ -5,9 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.codejournal.codingbat.warmup2.CountXX;
-
-public class CountXXTest {
+public class CountXxTest {
 
     private CountXX fixture;
 
